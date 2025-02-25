@@ -645,13 +645,13 @@
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" placeholder="Message">
+						<input type="text" id="subject" class="form-control" placeholder="Objet">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Votre message"></textarea>
 					</div>
 				</div>
 				<div class="form-group">
@@ -706,6 +706,13 @@
 	<!-- Google Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<script src="js/google_map.js"></script>
+	<script>
+		window.onbeforeunload = () => {
+  			for(const form of document.getElementsByTagName('form')) {
+    				form.reset();
+  			}
+		}
+	</script>
 	
 	<!-- Main -->
 	<script src="js/main.js"></script>
